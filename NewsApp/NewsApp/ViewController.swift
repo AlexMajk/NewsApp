@@ -4,16 +4,16 @@
 //
 //  Created by Александр Майко on 10.04.2024.
 //
-
+import Alamofire
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        APICaller.shared.getTopStories { data in
+            print(data)
+        }
     }
-
-
 }
 
